@@ -1,0 +1,302 @@
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+@font-face {
+    font-family: roboto;
+    src: url("../fonts/roboto-regular.ttf");
+}
+
+body {
+    background-attachment:fixed;
+    font-family: roboto, Arial, sans-serif;
+    font-size:12px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    width:100%;
+}
+
+hr {
+    color: #eee;
+}
+
+html * {
+    box-sizing: border-box;
+}
+
+/* Portrait layout (default) */
+.app {
+    background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
+    position:absolute;             /* position in the center of the screen */
+    left:50%;
+    top:50%;
+    height:50px;                   /* text area height */
+    width:225px;                   /* text area width */
+    text-align:center;
+    padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
+    margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
+                                   /* offset horizontal: half of text area width */
+}
+#lineHeader {
+    width:100%;
+    height: 20px;
+    position: relative;
+    background: #00a650;
+    border-bottom: 1px solid #ddd;
+}
+#header, .header {
+    width:100%;
+    height: 50px;
+    position: relative;
+    padding: 14px 10px;
+    background: #00a650;
+    display: table;
+    color: #fff;
+    font-size: 18px;
+}
+#header .block, .header .block {
+    display: table-cell;
+    min-width: 80px;
+    padding: 0;
+    vertical-align: top;
+}
+.block.block-left {
+    width: 80px;
+}
+.block.block-center {
+    text-align: center;
+}
+.block.block-right {
+    text-align: right;
+    width: 80px;
+}
+.block-right i {
+    color: #fff;
+}
+#side-search {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    float: right;
+    margin-right: 5px;
+}
+#footer {
+    width:100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: none;
+    padding: 20px;
+    font-size: 16px;
+    font-weight: 400;
+    height: calc(100% - 70px);
+    overflow: auto;
+    background-color: #f3f3f3;
+}
+#search {
+    width:100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: none;
+    padding: 0;
+    font-size: 16px;
+    font-weight: 400;
+    height: calc(100% - 20px);
+    overflow: auto;
+    background-color: #f3f3f3;
+}
+.btn-default {
+    text-decoration: none;
+    font-size: 18px;
+    border: 1px solid #fff;
+    padding: 7px 10px;
+    color: #fff;
+}
+#YMapsID {
+    position: absolute;
+    top: 70px;
+    left: 0;
+}
+.realty_photo {
+    padding: 0;
+    overflow: hidden;
+    outline: none;
+    margin: 0;
+    margin-bottom: 20px;
+}
+.realty_photo img {
+    max-width:600px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.loadMap {
+    text-decoration: none;
+    font-size: 14px;
+    border: 1px solid #fff;
+    padding: 5px 10px;
+    color: #fff;
+    margin-left: 5px;
+}
+
+.round1, .round1:after, .round1:before{
+    border-radius: 50%;
+    border: 3px solid transparent;
+}
+
+.round1:after, .round1:before{
+    position: absolute;
+    content: '';
+}
+
+.round1{
+    width: 100px;
+    height: 100px;
+    border-top-color: #1FC900;
+    position: relative;
+    -webkit-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+}
+
+.round1:after{
+    top: 7px;
+    bottom: 7px;
+    left: 7px;
+    right: 7px;
+    border-top-color: #00a650;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+.round1:before{
+    top: 17px;
+    bottom: 17px;
+    left: 17px;
+    right: 17px;
+    border-top-color: #1FC900;
+    -webkit-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
+}
+
+.anti:before, .anti2:before{
+    -webkit-animation: antispin 0.3s linear infinite;
+    animation: antispin 0.3s linear infinite;
+    border-bottom-color: #1FC900;
+    top: 47px;
+    bottom: 47px;
+    left: 47px;
+    right: 47px;
+}
+
+@-webkit-keyframes spin{
+    0% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin{
+    0% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes antispin{
+    0% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(-360deg);
+        -ms-transform: rotate(-360deg);
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes antispin{
+    0% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(-360deg);
+        -ms-transform: rotate(-360deg);
+        transform: rotate(-360deg);
+    }
+}
+/* End */
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+        background-position:left center;
+        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
+        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
+                                      /* offset horizontal: half of image width and text area width */
+    }
+}
+
+h1 {
+    font-size:24px;
+    font-weight:normal;
+    margin:0px;
+    overflow:visible;
+    padding:0px;
+    text-align:center;
+}
+
+.event {
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    color:#FFFFFF;
+    font-size:12px;
+    margin:0px 30px;
+    padding:2px 0px;
+}
+
+.event.listening {
+    background-color:#333333;
+    display:block;
+}
+
+.event.received {
+    background-color:#4B946A;
+    display:none;
+}
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+}
